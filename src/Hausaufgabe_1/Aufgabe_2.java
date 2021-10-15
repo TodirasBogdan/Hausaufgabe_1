@@ -2,8 +2,12 @@ package Hausaufgabe_1;
 
 public class Aufgabe_2 {
 
+    /**
+     *
+     * @param arr
+     * @return die maximale Zahl aus einem Array
+     */
     public int max(int[] arr) {
-        // return die maximale Zahl aus einem Array
         int max = arr[0];
 
         for (int i = 1; i < arr.length; i++) {
@@ -15,8 +19,12 @@ public class Aufgabe_2 {
         return max;
     }
 
+    /**
+     *
+     * @param arr
+     * @return die minimale Zahl aus einem Array
+     */
     public int min(int[] arr) {
-        // return die minimale Zahl aus einem Array
         int min = arr[0];
 
         for (int i = 1; i < arr.length; i++) {
@@ -28,8 +36,12 @@ public class Aufgabe_2 {
         return min;
     }
 
+    /**
+     *
+     * @param arr
+     * @return die Summe aus einem Array - die minimale Zahl
+     */
     public int max_sum(int[] arr) {
-        // return die Summe aus einem Array - die minimale Zahl
         int sum = 0;
 
         for (int i = 0; i < arr.length; i++) {
@@ -40,8 +52,12 @@ public class Aufgabe_2 {
         return max_sum;
     }
 
+    /**
+     *
+     * @param arr
+     * @return die Summe aus einem Array - die maximale Zahl
+     */
     public int min_sum(int[] arr) {
-        // return die Summe aus einem Array - die maximale Zahl
         int sum = 0;
 
         for (int i = 0; i < arr.length; i++) {

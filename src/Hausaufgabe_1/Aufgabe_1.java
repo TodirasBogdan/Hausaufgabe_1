@@ -2,8 +2,12 @@ package Hausaufgabe_1;
 
 public class Aufgabe_1 {
 
+    /**
+     *
+     * @param notes
+     * @return die Noten < 38
+     */
     public int[] nicht_ausreichende_noten(int[] notes) {
-        // return die Noten < 38
         int[] new_notes = new int[notes.length];
         int j = 0;
 
@@ -21,8 +25,12 @@ public class Aufgabe_1 {
         return new_notes_2;
     }
 
+    /**
+     *
+     * @param notes
+     * @return die Durchschnittswert der unabgerundeten Noten
+     */
     public int durchschnittswert(int[] notes) {
-        // return die Durchschnittswert der unabgerundeten Noten
         int sum = 0;
 
         for (int i = 0; i < notes.length; i++) {
@@ -32,8 +40,12 @@ public class Aufgabe_1 {
         return sum / notes.length;
     }
 
+    /**
+     *
+     * @param notes
+     * @return nur die abgerundete Noten
+     */
     public int[] abgerundete_noten(int[] notes) {
-        // return nur die abgerundete Noten
         int[] new_notes = new int[notes.length];
         int length_2 = 0;
 
@@ -54,8 +66,12 @@ public class Aufgabe_1 {
         return new_notes_2;
     }
 
+    /**
+     *
+     * @param notes
+     * @return die maximale abgerundete Note
+     */
     public int max_abgerundete_note(int[] notes) {
-        // return die maximale abgerundete Note
         int[] new_notes = abgerundete_noten(notes);
         int max = new_notes[0];
 

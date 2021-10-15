@@ -2,8 +2,13 @@ package Hausaufgabe_1;
 
 public class Aufgabe_3 {
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return die Summe von 2 Zahlen die als Array geschrieben sind
+     */
     public int[] summe(int[] a, int[] b) {
-        // return die Summe von 2 Zahlen die als Array geschrieben sind
         int[] sum = new int[a.length];
         int carry = 0;
 
@@ -28,8 +33,13 @@ public class Aufgabe_3 {
         }
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return die Differenz von 2 Zahlen die als Array geschrieben sind
+     */
     public int[] differenz(int[] a, int[] b) {
-        // return die Differenz von 2 Zahlen die als Array geschrieben sind
         int[] diff = new int[a.length];
         int carry = 0;
 
@@ -58,8 +68,13 @@ public class Aufgabe_3 {
         }
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return die Multiplikation von 2 Zahlen die als Array geschrieben sind
+     */
     public int[] multiplikation(int[] a, int b) {
-        // return die Multiplikation von 2 Zahlen die als Array geschrieben sind
         int[] mul = new int[a.length];
         int carry = 0;
         for (int i = a.length - 1; i >= 0; i--) {
@@ -83,8 +98,13 @@ public class Aufgabe_3 {
         }
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return die Division von 2 Zahlen die als Array geschrieben sind
+     */
     public int[] division(int[] a, int b) {
-        // return die Division von 2 Zahlen die als Array geschrieben sind
         int[] div = new int[a.length];
         int new_size = div.length;
         int i = 0, j = 0;

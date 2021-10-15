@@ -2,8 +2,12 @@ package Hausaufgabe_1;
 
 public class Aufgabe_4 {
 
+    /**
+     *
+     * @param arr
+     * @return die minimale Zahl aus einem Array
+     */
     public int billigste_tastatur(int[] arr) {
-        // return die minimale Zahl aus einem Array
         int min = arr[0];
 
         for (int i = 1; i < arr.length; i++) {
@@ -15,8 +19,13 @@ public class Aufgabe_4 {
         return min;
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return die maximale Zahl aus 2 Arrays
+     */
     public int teuersten_gegenstand(int[] a, int[] b) {
-        // return die maximale Zahl aus 2 Arrays
         int max1 = a[0], max2 = b[0];
 
         for (int i = 1; i < a.length; i++) {
@@ -37,8 +46,13 @@ public class Aufgabe_4 {
         }
     }
 
+    /**
+     *
+     * @param arr
+     * @param budget
+     * @return die maximale Zahl aus einem Array <= budget
+     */
     public int teuerste_USB_unten_budget(int[] arr, int budget) {
-        // return die maximale Zahl aus einem Array < budget
         int max = -1;
 
         for (int i = 0; i < arr.length; i++) {
@@ -51,8 +65,14 @@ public class Aufgabe_4 {
 
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @param budget
+     * @return die maximale Summe von 2 Elementen aus 2 Arrays <= budget
+     */
     public int maximal_geldbetrag(int a[], int b[], int budget) {
-        // return die maximale Summe von 2 Elementen aus 2 Arrays < budget
         int max = -1;
 
         for (int i = 0; i < a.length; i++) {
