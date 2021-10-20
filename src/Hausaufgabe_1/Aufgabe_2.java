@@ -1,11 +1,15 @@
 package Hausaufgabe_1;
 
+/**
+ * Es gibt ein Array mit n positive Zahlen.
+ */
+
 public class Aufgabe_2 {
 
     /**
-     *
-     * @param arr
-     * @return die maximale Zahl aus einem Array
+     * Findet die maximale Zahl aus der Array arr.
+     * @param arr ist ein Array mit n positive Zahlen.
+     * @return die maximale Zahl aus arr
      */
     public int max(int[] arr) {
         int max = arr[0];
@@ -20,9 +24,9 @@ public class Aufgabe_2 {
     }
 
     /**
-     *
-     * @param arr
-     * @return die minimale Zahl aus einem Array
+     * Findet die minimale Zahl aus de Array arr.
+     * @param arr ist ein Array
+     * @return die minimale Zahl aus arr
      */
     public int min(int[] arr) {
         int min = arr[0];
@@ -37,35 +41,33 @@ public class Aufgabe_2 {
     }
 
     /**
-     *
-     * @param arr
+     * Findet die maximale Summe von n-1 Zahlen aus der Array arr.
+     * @param arr ist ein Array mit n positive Zahlen.
      * @return die Summe aus einem Array - die minimale Zahl
      */
-    public int max_sum(int[] arr) {
+    public int maxSum(int[] arr) {
         int sum = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
+        for (int j : arr) {
+            sum = sum + j;
         }
-        int max_sum = sum - min(arr);
 
-        return max_sum;
+        return sum - min(arr);
     }
 
     /**
-     *
-     * @param arr
+     * Findet die minimale Summe von n-1 Zahlen aus der Array arr.
+     * @param arr mit n positive Zahlen.
      * @return die Summe aus einem Array - die maximale Zahl
      */
-    public int min_sum(int[] arr) {
+    public int minSum(int[] arr) {
         int sum = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
+        for (int j : arr) {
+            sum = sum + j;
         }
-        int min_sum = sum - max(arr);
 
-        return min_sum;
+        return sum - max(arr);
     }
 
 }

@@ -1,12 +1,16 @@
 package Hausaufgabe_1;
 
+/**
+ *  Es gibt 2 große Zahlen. Die Zahlen sind als Array dargestellt.
+ */
+
 public class Aufgabe_3 {
 
     /**
-     *
-     * @param a
-     * @param b
-     * @return die Summe von 2 Zahlen die als Array geschrieben sind
+     * Berechnet die Summe. Die Zahlen haben die gleiche Anzahl an Ziffern.
+     * @param a ist eine große Zahl
+     * @param b ist eine große Zahl
+     * @return die Summe von 2 Zahlen (a und b) die als Array geschrieben sind
      */
     public int[] summe(int[] a, int[] b) {
         int[] sum = new int[a.length];
@@ -24,9 +28,7 @@ public class Aufgabe_3 {
         if (carry == 1) {
             int[] new_sum = new int[sum.length + 1];
             new_sum[0] = 1;
-            for (int i = 0; i < sum.length; i++) {
-                new_sum[i + 1] = sum[i];
-            }
+            System.arraycopy(sum, 0, new_sum, 1, sum.length);
             return new_sum;
         } else {
             return sum;
@@ -34,10 +36,10 @@ public class Aufgabe_3 {
     }
 
     /**
-     *
-     * @param a
-     * @param b
-     * @return die Differenz von 2 Zahlen die als Array geschrieben sind
+     * Berechnet die Differenz. Die Zahlen haben die gleiche Anzahl an Ziffern.
+     * @param a ist eine große Zahl
+     * @param b ist eine große Zahl
+     * @return die Differenz von 2 Zahlen (a und b) die als Array geschrieben sind
      */
     public int[] differenz(int[] a, int[] b) {
         int[] diff = new int[a.length];
@@ -57,9 +59,7 @@ public class Aufgabe_3 {
         if (carry == 1) {
             int[] diff2 = new int[a.length + 1], diff3 = new int[a.length + 1], diff4;
             diff2[0] = 1;
-            for (int i = 0; i < diff.length; i++) {
-                diff3[i + 1] = diff[i];
-            }
+            System.arraycopy(diff, 0, diff3, 1, diff.length);
             diff4 = differenz(diff2, diff3);
             diff4[0] = -1;
             return diff4;
@@ -69,10 +69,10 @@ public class Aufgabe_3 {
     }
 
     /**
-     *
-     * @param a
-     * @param b
-     * @return die Multiplikation von 2 Zahlen die als Array geschrieben sind
+     * Berechnet die Multiplikation. Die Zahlen haben die gleiche Anzahl an Ziffern.
+     * @param a ist eine große Zahl
+     * @param b ist eine große Zahl
+     * @return die Multiplikation von 2 Zahlen (a und b) die als Array geschrieben sind
      */
     public int[] multiplikation(int[] a, int b) {
         int[] mul = new int[a.length];
@@ -89,9 +89,7 @@ public class Aufgabe_3 {
         if (carry != 0) {
             int[] new_mul = new int[mul.length + 1];
             new_mul[0] = carry;
-            for (int i = 0; i < mul.length; i++) {
-                new_mul[i + 1] = mul[i];
-            }
+            System.arraycopy(mul, 0, new_mul, 1, mul.length);
             return new_mul;
         } else {
             return mul;
@@ -99,10 +97,10 @@ public class Aufgabe_3 {
     }
 
     /**
-     *
-     * @param a
-     * @param b
-     * @return die Division von 2 Zahlen die als Array geschrieben sind
+     * Berechnet die Division. Die Zahlen haben die gleiche Anzahl an Ziffern.
+     * @param a ist eine große Zahl
+     * @param b ist eine große Zahl
+     * @return die Division von 2 Zahlen (a und b) die als Array geschrieben sind
      */
     public int[] division(int[] a, int b) {
         int[] div = new int[a.length];

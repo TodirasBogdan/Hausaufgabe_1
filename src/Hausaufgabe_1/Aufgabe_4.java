@@ -1,18 +1,23 @@
 package Hausaufgabe_1;
 
+/**
+ * Markus will ein USB Laufwerk und eine Tastatur kaufen. Der Elektronik-Shop hat
+ * verschiedene USB Laufwerke und Tastaturen mit verschiedene Preise.
+ */
+
 public class Aufgabe_4 {
 
     /**
-     *
-     * @param arr
+     * Eine Methode, welche die billigste Tastatur zurückgibt.
+     * @param tastaturen ist ein Array von Tastaturpreise
      * @return die minimale Zahl aus einem Array
      */
-    public int billigste_tastatur(int[] arr) {
-        int min = arr[0];
+    public int billigsteTastatur(int[] tastaturen) {
+        int min = tastaturen[0];
 
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
+        for (int i = 1; i < tastaturen.length; i++) {
+            if (tastaturen[i] < min) {
+                min = tastaturen[i];
             }
         }
 
@@ -20,44 +25,40 @@ public class Aufgabe_4 {
     }
 
     /**
-     *
-     * @param a
-     * @param b
+     * Eine Methode, welche den teuersten Gegenstand zurückgibt.
+     * @param tastaturen ist ein Array von Tastaturpreise
+     * @param usb ist ein Array von Usbpreise
      * @return die maximale Zahl aus 2 Arrays
      */
-    public int teuersten_gegenstand(int[] a, int[] b) {
-        int max1 = a[0], max2 = b[0];
+    public int teuerstenGegenstand(int[] tastaturen, int[] usb) {
+        int max1 = tastaturen[0], max2 = usb[0];
 
-        for (int i = 1; i < a.length; i++) {
-            if (a[i] > max1) {
-                max1 = a[i];
+        for (int i = 1; i < tastaturen.length; i++) {
+            if (tastaturen[i] > max1) {
+                max1 = tastaturen[i];
             }
         }
-        for (int i = 1; i < b.length; i++) {
-            if (b[i] > max2) {
-                max2 = b[i];
+        for (int i = 1; i < usb.length; i++) {
+            if (usb[i] > max2) {
+                max2 = usb[i];
             }
         }
 
-        if (max1 > max2) {
-            return max1;
-        } else {
-            return max2;
-        }
+        return Math.max(max1, max2);
     }
 
     /**
-     *
-     * @param arr
-     * @param budget
-     * @return die maximale Zahl aus einem Array <= budget
+     * Eine Methode, welche das teuerste USB Laufwerk, das Markus kaufen kann, zurückgibt.
+     * @param usb ist ein Array von Usbpreise
+     * @param budget ist das Budget von Markus
+     * @return die maximale Zahl aus dem Array usb ≤ budget
      */
-    public int teuerste_USB_unten_budget(int[] arr, int budget) {
+    public int teuersteUsbUntenBudget(int[] usb, int budget) {
         int max = -1;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max && arr[i] <= budget) {
-                max = arr[i];
+        for (int j : usb) {
+            if (j > max && j <= budget) {
+                max = j;
             }
         }
 
@@ -66,19 +67,22 @@ public class Aufgabe_4 {
     }
 
     /**
-     *
-     * @param a
-     * @param b
-     * @param budget
-     * @return die maximale Summe von 2 Elementen aus 2 Arrays <= budget
+     * Findet, anhand Markus’ Budget und der Preislisten für die Tastaturen und
+     * USB-Laufwerke, den maximalen Geldbetrag, der von Markus ausgegeben wird. Wenn
+     * er nicht genug für beide hat, gibt stattdessen -1 zurück. Er kauft nur die zwei
+     * benötigten Gegenstände.
+     * @param tastaturen ist ein Array von Tastaturpreise
+     * @param usb ist ein Array von Usbpreise
+     * @param budget ist das Budget von Markus
+     * @return die maximale Summe von 2 Elementen aus die 2 Arrays <= budget
      */
-    public int maximal_geldbetrag(int a[], int b[], int budget) {
+    public int maximalGeldbetrag(int[] tastaturen, int[] usb, int budget) {
         int max = -1;
 
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < b.length; j++) {
-                if (a[i] + b[j] > max && a[i] + b[j] <= budget) {
-                    max = a[i] + b[j];
+        for (int k : tastaturen) {
+            for (int i : usb) {
+                if (k + i > max && k + i <= budget) {
+                    max = k + i;
                 }
             }
         }
